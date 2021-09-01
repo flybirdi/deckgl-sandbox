@@ -2,6 +2,7 @@ import { initMap } from "./map";
 import { ToolBar } from "./ToolSet";
 import { SliderTool } from "./SliderTool";
 import { airportLayer, arcLayer } from "./layers";
+import './styles.css';
 
 const map = initMap(document.getElementById("container"));
 map.addLayers([airportLayer, arcLayer]);
@@ -46,5 +47,5 @@ toolbar.addTool(arcHeightSlider);
 // (original) refactorings? decouple toolbar state and map state
 // (original) Refactor intitial layers so they're injected at startup rather than being inbuilt in the map setup
 
-// UI random ideas
+// Random broader ideas
 // Free draw (annotate) shit on map -> get canvas -> handle mouse events -> store state -> render on map (with fixed zoom level) -> extension = handle zoom
