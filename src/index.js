@@ -12,8 +12,12 @@ const toolbar = new ToolBar({
 });
 
 /*
+ * Question 1:
  * BUG in SliderTool, it's a one liner, but we can't find it
+ *
+ * uncomment the below to get started.
  */
+/*
 const arcWidthSlider = new SliderTool({
   id: "slider",
   min: 1,
@@ -35,3 +39,23 @@ const arcHeightSlider = new SliderTool({
   },
 });
 toolbar.addTool(arcHeightSlider);
+*/
+
+/*
+ * Question 2
+ * Implement the below
+*/
+/*
+toolbar.remove(id)
+*/
+
+/*
+ * Question 3 (Open ended)
+ *
+ * Pretent we're product managers who can't code.
+ *
+ * User Story: As a user, I want to be able to draw on the map.
+ * It doesn't bother me if it's freehand(pen tool) or known shapes.
+ *
+ * Let's build it.
+ */
