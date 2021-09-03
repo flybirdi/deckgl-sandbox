@@ -11,6 +11,9 @@ const toolbar = new ToolBar({
   toolsContainer: document.getElementById("tools"),
 });
 
+/*
+ * BUG in SliderTool, it's a one liner, but we can't find it
+ */
 const arcWidthSlider = new SliderTool({
   id: "slider",
   min: 1,
@@ -32,23 +35,3 @@ const arcHeightSlider = new SliderTool({
   },
 });
 toolbar.addTool(arcHeightSlider);
-
-// Questions:
-// 1. Create a toolbar.removeTool function and ensure everything is cleaned up
-// 2. Implement remove all tools
-// 3. Create a toggle tool that toggles flight paths
-// 4*. Create a color picker
-// 5.
-// ? Create a layer that updates in realtime
-
-// ? Track tools in the Tool class
-// Vector to raster to map?
-// Deliberate start test with broken function due to arrow function
-// Show values of sliders next to slider
-
-// Refactoring exercises
-// (from - original(not this repo)) refactorings? decouple toolbar state and map state
-// (from - original(not this repo)) Refactor intitial layers so they're injected at startup rather than being inbuilt in the map setup
-
-// Random broader ideas
-// Free draw (annotate) shit on map -> get canvas -> handle mouse events -> store state -> render on map (with fixed zoom level) -> extension = handle zoom

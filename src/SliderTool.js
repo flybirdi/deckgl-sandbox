@@ -7,6 +7,7 @@ export class SliderTool extends Tool {
     this.min = opts.min || 1;
     this.max = opts.max || 100;
   }
+
   inputHandler(event) {
     this.handler(Number(event.target.value));
   }
@@ -18,7 +19,7 @@ export class SliderTool extends Tool {
     slider.setAttribute("step", "0.01");
     slider.setAttribute("value", this.val);
     slider.setAttribute("id", this.id);
-    const boundInputHandler = this.inputHandler.bind(this);
+    const boundInputHandler = this.inputHandler;
     slider.addEventListener("input", boundInputHandler);
     return slider;
   }
